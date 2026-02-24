@@ -1,0 +1,41 @@
+:root {
+  --neon-blue: #00f2fe;
+  --bg-deep: radial-gradient(circle at center, #0a244d 0%, #051025 100%);
+  --glass-white: rgba(255, 255, 255, 0.05);
+}
+
+.glass-page {
+  min-height: 100vh;
+  background: var(--bg-deep);
+  color: white;
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.center-content { justify-content: center; align-items: center; text-align: center; }
+
+.glow-text {
+  color: white;
+  text-shadow: 0 0 15px var(--neon-blue);
+}
+
+.hub-container { display: flex; gap: 30px; margin-top: 50px; }
+
+.hub-card {
+  background: var(--glass-white);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 25px;
+  width: 280px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.hub-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.3);
+}
+
+.card-icon { font-size: 3rem; margin-bottom: 20px; }

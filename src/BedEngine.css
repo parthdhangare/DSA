@@ -1,0 +1,404 @@
+/* 1. Global Layout & Centering */
+/* 1. Global Layout & Centering */
+/* Creative Pill-Button */
+.creative-neon-btn {
+  background: rgba(0, 242, 254, 0.05);
+  border: 1px solid #00f2fe;
+  color: #00f2fe;
+  padding: 10px 22px;
+  border-radius: 30px; /* Pill Shape */
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+.creative-neon-btn:hover {
+  background: #00f2fe;
+  color: #051025;
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.6);
+  transform: translateY(-3px);
+}
+
+/* Card Order Logic */
+.ward-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.bed-card-v3 {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Status Glows */
+.occupied { border-color: #ff4d4d; color: #ff4d4d; }
+.available { border-color: #2ecc71; color: #2ecc71; }
+.cleaning { border-color: #f1c40f; color: #f1c40f; }
+
+.bed-card-v3:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}/* Creative Pill-Shaped Neon Button */
+.neon-add-btn, .creative-neon-btn {
+  position: relative;
+  background: rgba(0, 242, 254, 0.05); /* Subtle transparent fill */
+  border: 1px solid #00f2fe;
+  color: #00f2fe;
+  padding: 10px 24px;
+  border-radius: 30px; /* Modern pill shape */
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+/* Hover State: DECISIVE ACTION */
+.neon-add-btn:hover, .creative-neon-btn:hover {
+  background: #00f2fe;
+  color: #051025; /* Dark text for maximum contrast on highlight */
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.7), 
+              0 0 10px rgba(0, 242, 254, 0.4);
+  transform: translateY(-2px); /* Subtle lift */
+}
+
+/* The Light-Sweep Animation Layer */
+.neon-add-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.neon-add-btn:hover::before {
+  left: 100%; /* Sweeps light across button on hover */
+}
+
+.neon-add-btn:active {
+  transform: scale(0.95); /* Tactile feedback */
+}
+
+/* Ward Title Glow to match */
+.ward-header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px #00f2fe; /* Intense bluish glow */
+}
+.cyber-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at center, #0a244d 0%, #051025 100%);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.cyber-main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally centers all ward sections */
+}
+
+.centered-content-wrapper, .ward-view, .tab-panel {
+  width: 100%;
+  max-width: 1200px; /* Prevents cards from stretching too far */
+}
+
+/* 2. Creative Neon Ward Buttons */
+.creative-neon-btn {
+  position: relative;
+  background: rgba(0, 242, 254, 0.05);
+  border: 1px solid #00f2fe;
+  color: #00f2fe;
+  padding: 10px 22px;
+  border-radius: 30px; /* Pill shape */
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+.creative-neon-btn:hover {
+  background: #00f2fe;
+  color: #051025;
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.6);
+  transform: translateY(-2px);
+}
+
+/* 3. Ward Grid & Section Styling */
+.ward-section {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.ward-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+.ward-grid, .glass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* 4. Bed Card Hover & Popup Effects */
+.bed-card-v3, .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+}
+
+.bed-card-v3:hover, .glass-card:hover {
+  transform: scale(1.05) translateY(-8px); /* Dynamic "Lift" on hover */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* 5. Status Dynamic Coloring */
+.occupied { border-color: #ff4d4d; color: #ff4d4d; }
+.available { border-color: #2ecc71; color: #2ecc71; }
+.cleaning { border-color: #f1c40f; color: #f1c40f; }
+
+.status-label { font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; }
+.glow-text { text-shadow: 0 0 15px #00f2fe; }
+
+/* 6. Sidebar & Bottom Dashboard Button */
+.cyber-sidebar {
+  width: 260px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-btn, .dashboard-return-btn {
+  margin-top: auto; /* Pins to bottom */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.dashboard-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #00f2fe;
+}
+
+/* 7. Directory List (Patients/Discharges) */
+.directory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.directory-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 35px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-green { color: #2ecc71; text-shadow: 0 0 10px #2ecc71; font-weight: bold; }
+.cyber-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at center, #0a244d 0%, #051025 100%);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Main Content Area with Horizontal Centering */
+.cyber-main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* Constrains width to keep content perfectly centered */
+.ward-view, .tab-panel, .centered-content-wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* 2. Sidebar Navigation */
+.cyber-sidebar {
+  width: 260px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand { 
+  font-size: 1.6rem; 
+  font-weight: bold; 
+  color: #00f2fe; 
+  margin-bottom: 50px; 
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.nav-link {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.05);
+  color: #00f2fe;
+  border-left: 4px solid #00f2fe;
+}
+
+/* Fixed Dashboard Button at Bottom */
+.dashboard-btn, .dashboard-return-btn {
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.dashboard-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #00f2fe;
+}
+
+/* 3. Ward & Grid Styling */
+.ward-section {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.ward-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+.ward-grid, .glass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* 4. Glassmorphism Card Styling */
+.bed-card-v3, .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+}
+
+/* Dynamic Hover Popup */
+.bed-card-v3:hover, .glass-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.occupied { border-color: #ff4d4d; color: #ff4d4d; }
+.available { border-color: #2ecc71; color: #2ecc71; }
+.cleaning { border-color: #f1c40f; color: #f1c40f; }
+
+.status-label { font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; }
+.glow-text { text-shadow: 0 0 15px #00f2fe; }
+
+/* 5. Directory & List Styling (Patients/Discharges) */
+.directory-list, .patient-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.directory-row, .patient-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 35px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.p-name, .dir-name { color: #00f2fe; font-weight: bold; font-size: 1.2rem; }
+.dir-meta { font-size: 0.9rem; opacity: 0.6; margin-left: 20px; }
+.neon-green { color: #2ecc71; text-shadow: 0 0 10px #2ecc71; font-weight: bold; }

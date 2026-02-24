@@ -1,0 +1,103 @@
+/* Login Container with a deep medical-tech blue gradient */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0a244d 0%, #051025 100%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Glassmorphism Card */
+.login-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  width: 350px;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Toggle buttons for Staff/Doctor */
+.toggle-group {
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  margin-bottom: 25px;
+  padding: 5px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #aaa;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.toggle-btn.active {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+}
+
+/* Input Styles */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #00f2fe;
+}
+
+/* Neon Login Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #00f2fe;
+  border: none;
+  border-radius: 10px;
+  color: #051025;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background: #4facfe;
+  box-shadow: 0 0 30px rgba(79, 172, 254, 0.6);
+}
+
+.forgot-pw {
+  color: #61dafb;
+  font-size: 12px;
+  margin-top: 15px;
+  display: block;
+  text-decoration: none;
+}
